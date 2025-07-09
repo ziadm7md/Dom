@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Card</title>
+</head>
+<body>
+
+<div id="card" style="border: 1px solid #000; padding: 20px; width: 250px;">
+    <h2 id="name">Ziad Mohammed</h2>
+    <p id="bio">I am a web developer </p>
+
+    <div id="funFact"></div>
+
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="FunFact()">Add and Remove</button>
+</div>
+
+<script>
+    function changeColor() {
+    const card = document.getElementById("card");
+    
+    card.style.backgroundColor = "LightGreen";
+    }
+
+    function FunFact() {
+    const funFact = document.getElementById("funFact");
+    if (funFact.textContent === "") {
+        funFact.textContent = "Hello World.....!!!";
+    } else {
+        funFact.textContent = "";
+    }
+    }
+</script>
+
+</body>
+</html>
